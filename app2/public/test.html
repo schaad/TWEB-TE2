@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script src="js/Raphael/raphael.js"></script>
+	<script src="js/Raphael/g.raphael.js"></script>
+	<script src="js/Raphael/g.dot.min.js"></script>
+
+        <script>
+            myFunct = function () {
+                var r = Raphael("graph");
+                var xs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 1, 2 ,3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+                var ys = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7];
+
+                var data = [294, 300, 204, 255, 348, 383, 334, 217, 114, 33, 44, 26, 100,100,100,100,100,100,100,100,100,100,100 ];
+                    
+                var axisy = ["Repos", "On s en fiche"];
+
+                var axisx = ["12am"];
+
+                // r.dotchart(0, 0, largeur, hauteur, valeurs sur l'axe x, valeurs sur l'axe y, données)
+                r.dotchart(0, 0, 600, 100, xs, ys, data, {symbol: "o", max: 10, heat: true, axis: "0 0 1 0", axisxstep: 11, axisystep: 1, axisxlabels: axisx, axisxtype: " ", axisytype: " ", axisylabels: axisy})
+                .hover(function () {
+                    this.marker = this.marker || r.tag(this.x, this.y, this.value, 0, this.r + 2).insertBefore(this);
+                    this.marker.show();
+                }, function () {
+                    this.marker && this.marker.hide();
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <div id="graph"></div>
+        <button onClick="myFunct()">Click</button>
+    </body>
+</html>
