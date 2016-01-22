@@ -26,4 +26,4 @@ When a user enter a reporitory, the name is transmitted to the server side with 
 * __Angular__, __ui-router__
 * __Bootstrap__
 * __HTML__, __Javascript__, __CSS__
-* __NPM__, __NodeJS__, __Express__, __Grunt__
+* __NPM__, __Bower__, __NodeJS__, __Express__, __Grunt__
