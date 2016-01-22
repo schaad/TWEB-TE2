@@ -73,12 +73,16 @@ angular.module("GitStats", ['ui.router']) // déclaration du module
 		}
 
 		if($scope.repository.stats[0]){
+			// On pourrait stocker toutes la requête mais pas d'utilité pour le moment
 			$scope.names.push($scope.repository.name);
-			console.log("NAMES : " + $scope.names);
 			$scope.$apply();
 			addSerie(serie, {
 				//'nameY' : $scope.repository.name
 			});
+		} else {
+			// Sometimes GitHub respond with an empty response without any reason. If we retry the correct response is provided. 
+			$scope.error = "Please retry. If it still don't work, this repository does not exist or is private.";
+			$scope.$apply();
 		}
 		
 	});

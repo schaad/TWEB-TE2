@@ -2,10 +2,11 @@
     <div class="col-lg-8 col-md-7 col-sm-6">
         <h1>Statistics</h1>
         <p>This page display the number of commit per week on a repository during the last year. You can add multiple repositories to compare them. Refreshing the page will clear the entry.</p>
+        <div class="alert alert-warning" ng-show="error !== ''" role="alert">{{ error }}</div>
         <form class="bs-component">
         	<div class="form-group">
         		<div class="col-lg-6">
-                    <div class="alert alert-warning" ng-show="error !== ''" role="alert">{{ error }}</div>
+                    
         			<label class="control-label" for="repos">Display statistics for this repository :</label>
         			<div class="input-group">
         				<input id="repos" type="text" class="form-control" placeholder="Author/RepositoryName" ng-model="repository.name">
@@ -23,5 +24,5 @@
 
 
     <div id="graph"></div>
-    <div ng-repeat="name in names">{{ $index + 1 }}{{ name }}</div>
+    <div ng-repeat="name in names">{{ $index + 1 }} {{ name }}</div>
 </div>
