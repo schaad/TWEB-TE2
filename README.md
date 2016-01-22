@@ -3,7 +3,7 @@
 
 This web application is created to display visually the number of commit per week during the last year on one or more repository. 
 
-![](https://github.com/schaad/TWEB-TE2/tree/master/img/ScreenShotApp.JPG)
+![](https://raw.githubusercontent.com/schaad/TWEB-TE2/master/img/ScreenShotApp.JPG "")
 
 To display a repository you must type the owner of the repository followed by a `/` and then the name of the repository itself.
 
