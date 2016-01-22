@@ -7,6 +7,8 @@ This web application is created to display visually the number of commit per wee
 
 ![](https://raw.githubusercontent.com/schaad/TWEB-TE2/master/img/ScreenShotApp.JPG "")
 
+Each dot represent the amount of commit for the week correspondant on the X axis. You can hover a dot to display the exact number of commit.  
+
 To display a repository you must type the owner of the repository followed by a `/` and then the name of the repository itself.
 
 >     Owner/RepositoryName
