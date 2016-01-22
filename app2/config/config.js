@@ -1,6 +1,7 @@
 var path = require('path'),
     rootPath = path.normalize(__dirname + '/..'),
-    env = process.env.NODE_ENV || 'development';
+    env = process.env.NODE_ENV || 'development';,
+    myPort = process.env.PORT || 3000;
 
 var config = {
   development: {
@@ -8,7 +9,7 @@ var config = {
     app: {
       name: 'app2'
     },
-    port: 3000,
+    port: myPort,
   },
 
   test: {
@@ -16,7 +17,7 @@ var config = {
     app: {
       name: 'app2'
     },
-    port: 3000,
+    port: myPort,
   },
 
   production: {
@@ -24,7 +25,7 @@ var config = {
     app: {
       name: 'app2'
     },
-    port: 3000,
+    port: myPort,
   }
 };
 
