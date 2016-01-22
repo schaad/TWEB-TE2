@@ -90,6 +90,16 @@ angular.module("GitStats", ['ui.router']) // déclaration du module
 	$scope.addRepository = function(){
 		$scope.error = "";
 
+		var re = new RegExp("^[^\s]+[\/][^\s]+$");
+
+		if(!re.test($scope.repository.name)){
+			$scope.error = "You must indicate the owner, a '/' and then the repository name.";
+			console.log("ERROR REGEX !!!");
+			return;
+		} else {
+			console.log("REgex ok");
+		}
+
 		for(i = 0 ; i < $scope.names.length ; ++i){
 			if($scope.names[i] === $scope.repository.name){
 				$scope.error = "This repository has already been added !";
@@ -97,6 +107,6 @@ angular.module("GitStats", ['ui.router']) // déclaration du module
 			}
 		}
 
-		socket.emit("addRepository", $scope.repository.name);
+		socket.emit("addRepository", escape($scope.repository.name));
 	}
 });
