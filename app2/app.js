@@ -19,6 +19,7 @@ var options = {
 	}
 };
 
+// For security reasons, theses values are currently revoked
 var clientId = 'ca46d15b7d1515859102';
 var clientSecret = '11ddbe6f36fcc4e94f9b3ecd4f095e6cbf0317fe';
 
